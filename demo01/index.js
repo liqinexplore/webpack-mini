@@ -1,3 +1,3 @@
 const sum = require('./sum')
 
-console.log(sum(3, 8))
+console.log(sum(3, 9))
