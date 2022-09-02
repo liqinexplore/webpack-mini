@@ -22,7 +22,17 @@ function f1() {
     })
 }
 
+function f2() {
+    return webpack({
+        entry: './index.js',
+        mode: 'none',
+        optimization: {
+            runtimeChunk: true,
+        }
+    })
+}
+
 // output.path 如何指定打包目录为 build 目录
-f1().run((err, stat) => {
+f2().run((err, stat) => {
     console.log(JSON.stringify(stat.toJson()))
 })
